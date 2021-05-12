@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    line-height: 1.6;
+    background-color: var(--very-light-gray);
+}
+
+/* typography */
+h1 {
+    font-size: 2rem;
+    font-family: "Big Shoulders Display", cursive;
+    color: var(--very-light-gray);
+    margin: 0;
+}
+
+p {
+    margin-top: 1.25em;
+    color: var(--transparent-white);
+}
+
+/* general style */
+
+.card-deck {
+    width: 90%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2em;
+    background: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card styles  */
+
+.card {
+    width: 280px;
+    height: 420px;
+}
+
+.card-inner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 2rem;
+}
+
+.card-inner > * {
+    flex-basis: 100%;
+}
+
+.card-orange {
+    background: var(--bright-orange);
+    border-radius: 5px 0 0 5px;
+}
+
+.card-cyan {
+    background: var(--dark-cyan);
+}
+
+.card-dark-cyan {
+    background: var(--very-dark-cyan);
+    border-radius: 0 5px 5px 0;
+}
+
+/* card button styles */
+
+.card-btn {
+    align-self: flex-end;
+}
+
+.learn-more {
+    cursor: pointer;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 50px;
+    outline: 0;
+    background: transparent;
+    color: var(--transparent-white);
+    font-weight: 700;
+    padding: 0.8em 1.75em;
+    transition: all 0.5s ease;
+}
+
+.learn-more:hover {
+    background: var(--transparent-white);
+    color: #000;
+}
+
+/* media queries */
+
+@media (max-width: 700px) {
+    .card-deck {
+        flex-direction: column;
+    }
+
+    .card-orange {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .card-dark-cyan {
+        border-radius: 0 0 5px 5px;
+    }
+}

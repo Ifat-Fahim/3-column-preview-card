@@ -4,7 +4,7 @@
 
 ![Screenshoot](images\card-deck.PNG)
 
-#[Live site](#)
+#[Live site](https://ifat-fahim.github.io/3-column-preview-card/)
 
 **Technologies used**
 -HTML5
